@@ -1,0 +1,34 @@
+# FlowSQL Config
+
+# You can define the default password in the MySQL database, or in config.php.
+# Set login_defined_in_db to true if you've defined it in the database and want to be logged in automatically.
+# Defaults: false, root, false
+autologin: false
+default_login_user: "root"
+login_defined_in_db: false
+
+# Updates:
+# When update is set to true, it will frequently check for updates and ask you to update
+# update_src defines where updates are sourced. It must be a JSON output with a "zipball_url" key. 
+# Defaults: false, https://api.github.com/repos/ethrythedev/FlowSQL/releases/latest
+update: false
+update_src: "https://api.github.com/repos/ethrythedev/FlowSQL/releases/latest"
+
+# Privacy:
+# Options: "bunny", "google", "none"
+# Default: "bunny"
+font_src: "bunny"
+
+# Server location:
+# Defaults: localhost, 3306, false
+server_location: "localhost"
+server_port: 3306
+allow_ext_srcs: false
+
+# Erorrs:
+# These may be helpful for debugging.
+# Default: true
+allow_php_default_errors: true
+
+# Please do not change the values below
+config_version: 1.0.0
