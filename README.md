@@ -30,3 +30,5 @@ An auto updater is currently under works. Once an update arrives, you currently 
 For support, you can contact me on Twitter or [Discord](https://discord.gg/nUnsZDXa6c).
 
 You can [report security issues here](https://github.com/ethrythedev/FlowSQL/blob/main/SECURITY.md).
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/I3I16IZT7)
