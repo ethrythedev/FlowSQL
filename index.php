@@ -74,6 +74,6 @@
         </div>
     </div>
     
-    <div style="position: fixed; bottom: 10px; color: gray; left: 50%; transform: translateX(-50%);"><a href="./LICENSE">License</a></div>
+    <div style="position: fixed; bottom: 10px; color: gray; left: 50%; transform: translateX(-50%);">FlowSQL v<?php echo $configData["config_version"]; ?><span style="margin-left: 7px; margin-right: 7px;">&nbsp;</span><a href="./LICENSE">License</a></div>
 </body>
 </html>
