@@ -29,4 +29,4 @@ An auto updater is currently under works. Once an update arrives, you currently 
 ## More Information
 For support, you can contact me on Twitter or [Discord](https://discord.gg/nUnsZDXa6c).
 
-If you find any unfixed security issues (minor or severe), please tell me via a DM on Discord, Twitter, or the Security Vulnerabilities section of this GitHub repo **before** publishing it. If possible, please allow 6-12 hours before you publish it. This way, a fix will be prepared. You will also be given credit in our release notice, if requested.
+You can [report security issues here](https://github.com/ethrythedev/FlowSQL/blob/main/SECURITY.md).
