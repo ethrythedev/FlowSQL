@@ -91,7 +91,8 @@
                 // check if any data was retrieved
                 if (empty($tableData)) {
                     echo "No data found in the table.";
-                    exit();
+                    echo "</div></div>";
+                    return;
                 }
 
                 // output the table as HTML
