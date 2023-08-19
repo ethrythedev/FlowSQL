@@ -15,6 +15,13 @@
         header("Location: ./panel/");
         exit;
     }
+
+    function is_ssl(){
+        if(isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO']=="https"){ return true; }
+        elseif(isset($_SERVER['HTTPS'])){ return true; }
+        elseif($_SERVER['SERVER_PORT'] == 443){ return true; }
+        else{ return false; }
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -46,6 +53,13 @@
                 <div class="center-inner-2">
                     <h1>Login</h1>
                     <p>Login to your MariaDB/MySQL database with FlowSQL.</p>
+                    <?php
+                        if(is_ssl()){
+                            // WHAT TO DO IF IT IS SSL / HTTPS
+                        }else{
+                            echo "<p class='text-danger'>⚠ This server is not using HTTPS!</p>";
+                        }
+                    ?>
                     <br>
                     <form action="./panel/login/login.php" method="post">
                         <input type="hidden" name="login" value="true">
