@@ -55,8 +55,9 @@
                     <p>Login to your MariaDB/MySQL database with FlowSQL.</p>
                     <?php
                         if(is_ssl()){
-                            // WHAT TO DO IF IT IS SSL / HTTPS
+                            // uses https
                         }else{
+                            // https is not used
                             echo "<p class='text-danger'>⚠ This server is not using HTTPS!</p>";
                         }
                     ?>
