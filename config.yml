@@ -25,7 +25,7 @@ server_location: "localhost"
 server_port: 3306
 allow_ext_srcs: false
 
-# Errors:
+# Errors: **work in progress**
 # These may be helpful for debugging.
 # Default: true
 allow_php_default_errors: true
