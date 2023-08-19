@@ -7,7 +7,7 @@ autologin: false
 default_login_user: "root"
 login_defined_in_db: false
 
-# Updates:
+# Updates: **work in progress**
 # When update is set to true, it will frequently check for updates and ask you to update
 # update_src defines where updates are sourced. It must be a JSON output with a "zipball_url" key. 
 # Defaults: false, https://api.github.com/repos/ethrythedev/FlowSQL/releases/latest
@@ -25,7 +25,7 @@ server_location: "localhost"
 server_port: 3306
 allow_ext_srcs: false
 
-# Erorrs:
+# Errors:
 # These may be helpful for debugging.
 # Default: true
 allow_php_default_errors: true
