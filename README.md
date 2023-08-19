@@ -19,7 +19,7 @@ We recommend:
 To download FlowSQL, you can go to [Releases](https://github.com/ethrythedev/FlowSQL/releases) and download the latest ZIP file. If you prefer to download via the repo, you can download it from this repo as well.
 
 ## Installation
-To install FlowSQL, simply unzip the release ZIP file in a "FlowSQL" folder on your web root directory (e.g. /var/www, /xampp/htdocs). You should then be able to access FlowSQL at http://127.0.0.1/FlowSQL.
+To install FlowSQL, simply unzip the release ZIP file in a "FlowSQL" folder on your web root directory (e.g. /var/www/html, /xampp/htdocs). You should then be able to access FlowSQL at http://127.0.0.1/FlowSQL.
 
 You do not need to make any changes to your database as all changes will be made through the logged in user account.
 
