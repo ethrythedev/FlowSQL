@@ -1,5 +1,5 @@
 <?php
-    if(!isset($_GET['db']) || !isset($_SESSION['username'])) {
+    if(!isset($_GET['db']) || !isset($_SESSION['flowsql__username'])) {
         die("error");
     }
 ?>
@@ -9,9 +9,9 @@
     <div>
         <?php 
             // database settings
-            $host = $_SESSION['hostname'];
-            $username = $_SESSION['username'];
-            $password = $_SESSION['pass'];
+            $host = $_SESSION['flowsql__hostname'];
+            $username = $_SESSION['flowsql__username'];
+            $password = $_SESSION['flowsql__pass'];
             $database = base64_decode($_GET['db']);
 
             if(!isset($_GET['table'])) {

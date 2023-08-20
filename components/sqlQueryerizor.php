@@ -6,14 +6,14 @@
     session_start();
 
     // verifying session bs
-    if(!isset($_GET['db']) || !isset($_SESSION['username'])) {
+    if(!isset($_GET['db']) || !isset($_SESSION['flowsql__username'])) {
         die("error");
     }
 
     // idk how many times ive copied and pasted this one bit, should prolly put it in a config page some day
-    $host = $_SESSION['hostname'];
-    $username = $_SESSION['username'];
-    $password = $_SESSION['pass'];
+    $host = $_SESSION['flowsql__hostname'];
+    $username = $_SESSION['flowsql__username'];
+    $password = $_SESSION['flowsql__pass'];
     $database = base64_decode($_GET['db']);
 
     // create mysqli object

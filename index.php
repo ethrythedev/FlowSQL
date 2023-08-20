@@ -11,7 +11,7 @@
         // sqlLogin();
     }
 
-    if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == true) {
+    if(isset($_SESSION["flowsql__isloggedin"]) && $_SESSION["flowsql__isloggedin"] == true) {
         header("Location: ./panel/");
         exit;
     }

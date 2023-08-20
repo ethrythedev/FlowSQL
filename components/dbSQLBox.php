@@ -1,5 +1,5 @@
 <?php
-    if(!isset($_GET['db']) || !isset($_SESSION['username'])) {
+    if(!isset($_GET['db']) || !isset($_SESSION['flowsql__username'])) {
         die("error");
     }
 ?>

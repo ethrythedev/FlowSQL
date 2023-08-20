@@ -1,6 +1,6 @@
 <?php
     session_start();
-    if(!isset($_SESSION["loggedin"])) {
+    if(!isset($_SESSION["flowsql__isloggedin"])) {
         die("Session invalid.");
     }
 
@@ -21,9 +21,9 @@
 
 
     // database connection settings
-    $host = $_SESSION['hostname'];
-    $username = $_SESSION['username'];
-    $password = $_SESSION['pass'];
+    $host = $_SESSION['flowsql__hostname'];
+    $username = $_SESSION['flowsql__username'];
+    $password = $_SESSION['flowsql__pass'];
     $database = ''; // no db
 
     // create a new mysqli thingamajig
@@ -123,7 +123,7 @@
                     <h1>Database Server Info</h1>
                     <form action="./" method="post">
                         <label for="dbSrvHostname">Hostname: </label>
-                        <input type="text" name="dbSrvHostname" id="dbSrvHostname" class="panelInput panelInputMostTxt" value="<?php echo isset($_SESSION["hostname"]) ? str_contains($_SESSION["hostname"], "localhost") ? "127.0.0.1" : $_SESSION["hostname"] : "?"; ?>" readonly>
+                        <input type="text" name="dbSrvHostname" id="dbSrvHostname" class="panelInput panelInputMostTxt" value="<?php echo isset($_SESSION["flowsql__hostname"]) ? str_contains($_SESSION["flowsql__hostname"], "localhost") ? "127.0.0.1" : $_SESSION["flowsql__hostname"] : "?"; ?>" readonly>
                         <br><br>
                         <label for="dbConnType">Connection: </label>
                         <input type="text" name="dbConnType" id="dbConnType" class="panelInput panelInputMostTxt <?php echo $sslUsed ? "" : "text-danger"; ?>" value="<?php echo $sslUsed ? "HTTPS" : "HTTP (insecure)"; ?>" readonly>

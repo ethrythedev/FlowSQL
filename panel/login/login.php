@@ -26,10 +26,10 @@
     } else {
         // connection successful
         
-        $_SESSION["loggedin"] = true;
-        $_SESSION["username"] = $username;
-        $_SESSION["pass"] = $password;
-        $_SESSION["hostname"] = $hostname;
+        $_SESSION["flowsql__isloggedin"] = true;
+        $_SESSION["flowsql__username"] = $username;
+        $_SESSION["flowsql__pass"] = $password;
+        $_SESSION["flowsql__hostname"] = $hostname;
         
         echo "<p style='color: green;'>Connected to MySQL successfully!</p>";
         echo "<p>You will now be redirected to <a href='../'>the panel</a>.</p>";
