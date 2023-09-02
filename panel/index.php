@@ -88,6 +88,39 @@
     <title>FlowSQL</title>
 
     <link rel="stylesheet" href="../components/style.css">
+
+    <script src="https://unpkg.com/jquery@3.3.1/dist/jquery.min.js"></script> <!-- for ajax -->
+
+    <script>
+        function checkForUpdates(url, p) {
+            p.firstElementChild.value = "Checking for updates...";
+
+            $.ajax({
+                url: url,
+                method: 'GET',
+                success: function (data) {
+                    // Handle the response data
+                    if(data["update"] == true) {
+                        p.firstElementChild.value = "Update available. Please download and install it.";
+                        p.removeAttribute("onclick");
+                        p.href = data["update_src"];
+                    } else {
+                        p.firstElementChild.value = "Good news! FlowSQL is up to date.";
+                        p.firstElementChild.classList.remove("inputLink");
+                    }
+                    
+                    if(data["downgrade"] == true) {
+                        p.firstElementChild.value = "FlowSQL version is " + data["versions"]["current_version"] + ", but the latest available version is only " + data["versions"]["new_version"];
+                        p.firstElementChild.classList.remove("inputLink");
+                        p.firstElementChild.classList.add("text-danger");
+                    }
+                },
+                error: function (error) {
+                    p.firstElementChild.value = 'Error: ' + error;
+                }
+            });
+        }
+    </script>
 </head>
 <body>
     <nav><?php include "../components/navContents.php"; ?></nav>
@@ -167,7 +200,7 @@
                         <input type="text" name="flowsqlVer" id="flowsqlVer" class="panelInput panelInputMostTxt" value="<?php echo $configData["config_version"] ?>" readonly>
                         <br><br>
                         <label for="flowsqlUpdate">Updates: </label>
-                        <a href="./flowSQLUpdate.php" target="_blank"><input type="text" name="flowsqlUpdate" id="flowsqlUpdate" class="panelInput panelInputMostTxt inputLink" value="Check for updates" readonly></a>
+                        <a href="./flowSQLUpdate.php" target="_blank" onclick="checkForUpdates(this.href, this); return false;"><input type="text" name="flowsqlUpdate" id="flowsqlUpdate" class="panelInput panelInputMostTxt inputLink" value="Check for updates" readonly></a>
                         <br><br>
                         <label for="flowsqlGH">GitHub: </label>
                         <a href="https://github.com/ethrythedev/FlowSQL/" rel="nofollow" target="_blank"><input type="text" name="flowsqlGH" id="flowsqlGH" class="panelInput panelInputMostTxt inputLink" value="See GitHub repo" readonly></a>

@@ -10,9 +10,11 @@ login_defined_in_db: false
 # Updates: **work in progress**
 # When update is set to true, it will frequently check for updates and ask you to update
 # update_src defines where updates are sourced. It must be a JSON output with a "zipball_url" key. 
-# Defaults: false, https://api.github.com/repos/ethrythedev/FlowSQL/releases/latest
+# latest_config defines where the latest version of the default config file is stored.
+# Defaults: false, https://api.github.com/repos/ethrythedev/FlowSQL/releases/latest, https://cdn.jsdelivr.net/gh/ethrythedev/FlowSQL@latest/config.yml
 update: false
 update_src: "https://api.github.com/repos/ethrythedev/FlowSQL/releases/latest"
+latest_config: "https://cdn.jsdelivr.net/gh/ethrythedev/FlowSQL@latest/config.yml"
 
 # Privacy:
 # Options: "bunny", "google", "none"
