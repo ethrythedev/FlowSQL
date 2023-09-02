@@ -1,11 +1,10 @@
 # FlowSQL Config
 
-# You can define the default password in the MySQL database, or in config.php.
-# Set login_defined_in_db to true if you've defined it in the database and want to be logged in automatically.
-# Defaults: false, root, false
+# You can define the default password in config.php.
+# Defaults: false, "root", true
 autologin: false
 default_login_user: "root"
-login_defined_in_db: false
+require_ip: true
 
 # Updates: **work in progress**
 # When update is set to true, it will frequently check for updates and ask you to update

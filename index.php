@@ -7,8 +7,10 @@
     $configData = parseYaml($yamlContent);
     // read config end
 
-    if($configData["autologin"] == true) {
-        // sqlLogin();
+    if($configData["autologin"] == "true") {
+        include "./config.php";
+        include "./panel/login/autologin.php";
+        sqlLogin(str_replace("\"", "", $configData["default_login_user"]), $configData["require_ip"], $AUTOLOGIN_IP);
     }
 
     if(isset($_SESSION["flowsql__isloggedin"]) && $_SESSION["flowsql__isloggedin"] == true) {
